@@ -6,7 +6,7 @@ import java.util.List;
 public interface UserDAO {
     boolean insert(User user);
 
-    User login(String id, String password);
+    User login(String email, String password);
 
     boolean existsByEmail(String email);
 

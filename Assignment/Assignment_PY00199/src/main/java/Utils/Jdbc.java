@@ -5,8 +5,8 @@ import java.sql.*;
 public class Jdbc {
     // Cấu hình thông tin kết nối
     private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=ABC_News;encrypt=false";
-    private static final String USER = "vannghia";
+    private static final String URL =  "jdbc:sqlserver://localhost:1433;databaseName=NewsPortal;encrypt=true;trustServerCertificate=true";
+    private static final String USER = "sa";
     private static final String PASSWORD = "123456";
 
     static {

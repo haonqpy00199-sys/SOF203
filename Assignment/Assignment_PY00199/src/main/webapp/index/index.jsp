@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ABC News - Trang tin tức hàng đầu Việt Nam, cập nhật tin tức nhanh chóng, chính xác và đa chiều.">
     <meta name="keywords" content="tin tức, Việt Nam, văn hóa, pháp luật, thể thao, ABC News">
-    <meta name="author" content="ABC News">
+    <meta name="author" content="New newspaper">
     <title>ABC News - Trang chủ</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
@@ -32,13 +32,22 @@
             10%, 90% { opacity: 1; transform: translate(-50%, 0); }
             100% { opacity: 0; transform: translate(-50%, -10px); }
         }
+        .site-header {
+    background: linear-gradient(90deg, #7F1D1D, #FCA5A5); /* Đỏ đậm đến đỏ nhạt */
+    color: #FFFFFF;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(127, 29, 29, 0.4); /* Bóng đỏ nhẹ */
+}
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="site-header">
         <div class="container">
-            <div class="logo">ABC <span>News</span></div>  
+            <div class="logo">New<span> newspaper</span></div>  
         	<%@ include file="../includes/news_index_nav.jsp" %>
     </header>
 

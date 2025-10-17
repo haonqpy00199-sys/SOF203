@@ -20,13 +20,13 @@ body {
 
 /* Header */
 .site-header {
-    background: linear-gradient(90deg, #1E3A8A, #3B82F6); /* Xanh dương đậm đến nhạt */
+    background: linear-gradient(90deg, #7F1D1D, #FCA5A5); /* Đỏ đậm đến đỏ nhạt */
     color: #FFFFFF;
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(127, 29, 29, 0.4); /* Bóng đỏ nhẹ */
 }
 .site-header .container {
     display: flex;
@@ -39,8 +39,10 @@ body {
     letter-spacing: 1px;
 }
 .site-header .logo span {
-    color: #F59E0B; /* Cam nhạt làm điểm nhấn */
+    color: #EF4444; /* Đỏ tươi làm điểm nhấn */
 }
+
+/* Menu */
 .menu {
     display: flex;
     align-items: center;
@@ -52,29 +54,38 @@ body {
     font-size: 16px;
     transition: color 0.3s;
 }
-.menu a:hover, .menu a.active {
-    color: #F59E0B; /* Cam nhạt khi hover hoặc active */
+.menu a:hover,
+.menu a.active {
+    color: #FCA5A5; /* Đỏ nhạt khi hover hoặc active */
 }
+
+/* Header actions */
 .header-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+/* Thanh tìm kiếm */
 .search-bar {
     padding: 8px;
     border: none;
     border-radius: 4px;
     font-size: 14px;
     background: #FFFFFF;
-    color: #1F2937;
+    color: #1F1F1F;
 }
+
+/* Thông tin người dùng */
 .user-info {
     font-size: 14px;
     font-weight: 600;
 }
+
+/* Nút đăng xuất */
 .logout-btn {
-    background: #F59E0B; /* Cam nhạt */
-    color: #1E3A8A; /* Xanh dương đậm */
+    background: #B91C1C; /* Đỏ chuẩn */
+    color: #FFFFFF; /* Trắng */
     padding: 8px 15px;
     border-radius: 4px;
     text-decoration: none;
@@ -82,11 +93,14 @@ body {
     transition: background 0.3s;
 }
 .logout-btn:hover {
-    background: #FBBF24; /* Cam sáng hơn khi hover */
+    background: #DC2626; /* Đỏ sáng hơn khi hover */
 }
-.login-btn, .register-btn {
-    background: #F59E0B;
-    color: #1E3A8A;
+
+/* Nút đăng nhập & đăng ký */
+.login-btn,
+.register-btn {
+    background: #B91C1C;
+    color: #FFFFFF;
     padding: 8px 15px;
     border-radius: 4px;
     text-decoration: none;
@@ -95,18 +109,20 @@ body {
     transition: background 0.3s;
     cursor: pointer;
 }
-.login-btn:hover, .register-btn:hover {
-    background: #FBBF24;
+.login-btn:hover,
+.register-btn:hover {
+    background: #DC2626; /* Đỏ sáng khi hover */
 }
 
 /* News Ticker */
 .news-ticker {
-    background: #F59E0B; /* Cam nhạt */
+    background: #DC2626; /* Đỏ trung bình */
     padding: 10px;
     font-size: 16px;
     font-weight: 600;
     overflow: hidden;
     position: relative;
+    color: #FFFFFF;
 }
 .ticker-content {
     display: inline-block;
@@ -139,9 +155,9 @@ body {
 .left-col h3 {
     font-size: 20px;
     font-weight: 700;
-    color: #1E3A8A; /* Xanh dương đậm */
+    color: #7F1D1D; /* Đỏ đậm */
     margin-bottom: 15px;
-    border-bottom: 2px solid #F59E0B; /* Cam nhạt */
+    border-bottom: 2px solid #F87171; /* Đỏ nhạt */
     padding-bottom: 8px;
 }
 .left-col .news-item {
@@ -165,12 +181,12 @@ body {
 }
 .left-col h4 a {
     text-decoration: none;
-    color: #1E3A8A;
+    color: #991B1B; /* Đỏ hơi đậm */
     font-size: 16px;
     font-weight: 600;
 }
 .left-col h4 a:hover {
-    color: #3B82F6; /* Xanh dương nhạt */
+    color: #EF4444; /* Đỏ sáng hơn khi hover */
 }
 .left-col p {
     font-family: 'Open Sans', sans-serif;
@@ -187,8 +203,8 @@ body {
 .center-col h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #1E3A8A;
-    border-bottom: 2px solid #F59E0B;
+    color: #7F1D1D; /* Đỏ đậm */
+    border-bottom: 2px solid #F87171; /* Đỏ nhạt */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -209,13 +225,13 @@ body {
     padding: 20px;
 }
 .center-col .featured h3 a {
-    color: #1E3A8A;
+    color: #991B1B; /* Đỏ trung bình */
     text-decoration: none;
     font-size: 22px;
     font-weight: 700;
 }
 .center-col .featured h3 a:hover {
-    color: #3B82F6;
+    color: #EF4444; /* Đỏ sáng khi hover */
 }
 .center-col .featured p {
     font-family: 'Open Sans', sans-serif;
@@ -245,12 +261,12 @@ body {
 }
 .center-col .news-content h3 a {
     text-decoration: none;
-    color: #1E3A8A;
+    color: #991B1B; /* Đỏ trung bình */
     font-size: 18px;
     font-weight: 600;
 }
 .center-col .news-content h3 a:hover {
-    color: #3B82F6;
+    color: #EF4444; /* Đỏ sáng */
 }
 .center-col .news-content p {
     font-family: 'Open Sans', sans-serif;
@@ -305,19 +321,20 @@ body {
 }
 .stat-box i {
     font-size: 32px;
-    color: #1E3A8A;
+    color: #DC2626; /* Đỏ trung bình */
     margin-bottom: 10px;
 }
 .stat-box h4 {
     font-size: 24px;
     font-weight: 700;
-    color: #1E3A8A;
+    color: #7F1D1D; /* Đỏ đậm */
 }
 .stat-box p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #4B5563;
 }
+
 
 /* Admin Actions */
 .admin-actions {
@@ -329,7 +346,7 @@ body {
 .admin-btn {
     flex: 1;
     text-align: center;
-    background: #1E3A8A;
+    background: #7F1D1D; /* Đỏ đậm */
     color: #FFFFFF;
     padding: 15px;
     border-radius: 8px;
@@ -346,7 +363,7 @@ body {
     font-size: 18px;
 }
 .admin-btn:hover {
-    background: #3B82F6;
+    background: #DC2626; /* Đỏ trung bình khi hover */
     transform: translateY(-3px);
 }
 
@@ -361,9 +378,9 @@ body {
 .right-col h3 {
     font-size: 20px;
     font-weight: 700;
-    color: #1E3A8A;
+    color: #7F1D1D; /* Đỏ đậm */
     margin-bottom: 15px;
-    border-bottom: 2px solid #E5E7EB; /* Xám nhạt cho đường viền */
+    border-bottom: 2px solid #F87171; /* Đỏ nhạt */
     padding-bottom: 8px;
 }
 .right-col ul {
@@ -375,8 +392,8 @@ body {
     margin-bottom: 12px;
 }
 .right-col .number {
-    background: #F59E0B;
-    color: #1E3A8A;
+    background: #DC2626; /* Đỏ trung bình */
+    color: #FFFFFF;
     width: 28px;
     height: 28px;
     display: inline-flex;
@@ -389,11 +406,11 @@ body {
 }
 .right-col a {
     text-decoration: none;
-    color: #1E3A8A;
+    color: #991B1B; /* Đỏ trung bình */
     font-size: 15px;
 }
 .right-col a:hover {
-    color: #3B82F6;
+    color: #EF4444; /* Đỏ sáng khi hover */
     text-decoration: underline;
 }
 .right-col p {
@@ -427,13 +444,15 @@ body {
     border-bottom: 1px solid #E5E7EB;
 }
 .news-table th {
-    background: #1E3A8A;
+    background: #7F1D1D; /* Đỏ đậm */
     color: #FFFFFF;
     font-weight: 600;
 }
 .news-table tr:hover {
-    background: #F9FAFB; /* Xám nhạt khi hover */
+    background: #FDF2F2; /* Đỏ rất nhạt khi hover */
 }
+
+/* Buttons */
 .edit-btn, .delete-btn, .approve-btn, .add-news-btn, .admin-btn {
     display: inline-block;
     padding: 8px 15px;
@@ -445,32 +464,33 @@ body {
     transition: background 0.3s;
 }
 .edit-btn {
-    background: #F59E0B;
-    color: #1E3A8A;
+    background: #F87171; /* Đỏ nhạt */
+    color: #7F1D1D; /* Đỏ đậm */
 }
 .edit-btn:hover {
-    background: #FBBF24;
+    background: #EF4444; /* Đỏ sáng khi hover */
+    color: #FFFFFF;
 }
 .delete-btn {
-    background: #DC2626; /* Đỏ đậm */
+    background: #DC2626; /* Đỏ trung bình */
     color: #FFFFFF;
 }
 .delete-btn:hover {
     background: #B91C1C; /* Đỏ đậm hơn khi hover */
 }
 .approve-btn {
-    background: #10B981; /* Xanh lá cho nút duyệt */
+    background: #16A34A; /* Xanh lá cho nút duyệt */
     color: #FFFFFF;
 }
 .approve-btn:hover {
-    background: #059669; /* Xanh lá đậm hơn khi hover */
+    background: #15803D; /* Xanh đậm hơn */
 }
 .add-news-btn {
-    background: #1E3A8A;
+    background: #7F1D1D; /* Đỏ đậm */
     color: #FFFFFF;
 }
 .add-news-btn:hover {
-    background: #3B82F6;
+    background: #DC2626; /* Đỏ trung bình khi hover */
 }
 
 /* News Form */
@@ -493,7 +513,7 @@ body {
     z-index: 2000;
     align-items: center;
     justify-content: center;
-    overflow-y: auto; /* Cho phép cuộn modal nếu nội dung dài */
+    overflow-y: auto;
 }
 
 /* Đảm bảo body không cuộn khi modal mở */
@@ -508,15 +528,15 @@ body.modal-open {
     padding: 30px;
     border-radius: 8px;
     position: relative;
-    max-height: 85vh; /* Giới hạn chiều cao */
-    overflow-y: auto; /* Cuộn dọc khi nội dung tràn */
+    max-height: 85vh;
+    overflow-y: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    margin: 5vh auto; /* Căn giữa theo chiều dọc */
+    margin: 5vh auto;
     animation: slideIn 0.3s ease-out;
-    min-height: 0; /* Cho phép thu nhỏ trong flex */
-    display: flex; /* Sử dụng flex để quản lý nội dung bên trong */
-    flex-direction: column; /* Nội dung xếp dọc */
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Custom scrollbar cho modal-content */
@@ -540,7 +560,7 @@ body.modal-open {
     .modal-content {
         width: 95%;
         padding: 20px;
-        max-height: 90vh; /* Tăng chiều cao tối đa trên mobile */
+        max-height: 90vh;
         margin: 5vh auto;
     }
 }
@@ -549,10 +569,12 @@ body.modal-open {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+/* --- Màu đỏ chủ đạo --- */
 .modal-content h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -563,15 +585,16 @@ body.modal-open {
     margin-bottom: 20px;
     text-align: center;
 }
+
 .form-group {
     margin-bottom: 20px;
-    width: 100%; /* Đảm bảo form-group chiếm toàn bộ chiều rộng */
+    width: 100%;
 }
 .form-group label {
     display: block;
     font-size: 14px;
     font-weight: 600;
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     margin-bottom: 5px;
 }
 .form-group input, .form-group select, .form-group textarea {
@@ -589,13 +612,15 @@ body.modal-open {
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #F59E0B;
-    box-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
+    border-color: #EF4444; /* Đỏ trung bình */
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
 }
+
+/* --- Nút gửi --- */
 .submit-btn {
     width: 100%;
-    background: #F59E0B;
-    color: #1E3A8A;
+    background: #B91C1C; /* Đỏ đậm */
+    color: #FFFFFF;
     padding: 12px;
     border: none;
     border-radius: 4px;
@@ -605,21 +630,25 @@ body.modal-open {
     transition: background 0.3s;
 }
 .submit-btn:hover {
-    background: #FBBF24;
+    background: #F87171; /* Đỏ nhạt */
 }
+
+/* --- Link trong modal --- */
 .modal-link {
     text-align: center;
     font-size: 14px;
     margin-top: 20px;
 }
 .modal-link a {
-    color: #1E3A8A;
+    color: #B91C1C;
     text-decoration: none;
     cursor: pointer;
 }
 .modal-link a:hover {
     text-decoration: underline;
 }
+
+/* --- Nút đóng --- */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -630,12 +659,12 @@ body.modal-open {
     transition: color 0.3s;
 }
 .close-btn:hover {
-    color: #1E3A8A;
+    color: #B91C1C;
 }
 
-/* Footer */
+/* --- Footer --- */
 .site-footer {
-    background: linear-gradient(90deg, #1E3A8A, #3B82F6);
+    background: linear-gradient(90deg, #7F1D1D, #F87171); /* Đỏ đậm → Đỏ nhạt */
     color: #FFFFFF;
     padding: 20px 0;
     margin-top: 30px;
@@ -647,7 +676,7 @@ body.modal-open {
     gap: 10px;
 }
 .social-links a {
-    color: #F59E0B;
+    color: #FCA5A5; /* Hồng nhạt */
     text-decoration: none;
     margin: 0 10px;
 }
@@ -671,10 +700,10 @@ body.modal-open {
     }
 }
 
-/* Nút Đăng xuất đồng bộ với giao diện */
+/* Nút Đăng xuất đồng bộ với giao diện đỏ */
 .logout-btn {
-    background-color: #FFA500; /* Cam tươi */
-    color: #1E3A8A; /* Xanh đậm */
+    background-color: #B91C1C; /* Đỏ đậm */
+    color: #FFFFFF; /* Trắng */
     padding: 8px 18px;
     border-radius: 8px;
     font-weight: 600;
@@ -682,8 +711,8 @@ body.modal-open {
     transition: all 0.3s ease;
 }
 .logout-btn:hover {
-    background-color: #FFB733; /* Cam sáng hơn khi hover */
-    color: #0F265C; /* Xanh đậm hơn khi hover */
+    background-color: #F87171; /* Đỏ nhạt khi hover */
+    color: #FFF5F5; /* Hơi sáng hơn khi hover */
 }
 
 /* Responsive Design */
@@ -763,7 +792,7 @@ body.modal-open {
     grid-template-columns: 2fr 1fr;
     gap: 25px;
     margin: 25px 0;
-    min-height: calc(100vh - 200px); /* Đảm bảo chiều cao tối thiểu */
+    min-height: calc(100vh - 200px);
 }
 
 /* Left Column - Tin tức chính */
@@ -776,23 +805,23 @@ body.modal-open {
 .left-col h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     margin-bottom: 20px;
-    border-bottom: 2px solid #F59E0B;
+    border-bottom: 2px solid #EF4444; /* Đỏ trung bình */
     padding-bottom: 10px;
 }
 
 /* Right Column - Sticky Sidebar */
 .right-col {
     position: sticky;
-    top: 20px; /* Khoảng cách từ đỉnh khi sticky */
+    top: 20px;
     align-self: flex-start;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    max-height: calc(100vh - 100px); /* Giới hạn chiều cao viewport */
-    overflow-y: auto; /* Cho phép scroll nội dung sidebar nếu quá dài */
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 .right-col .box {
     background: #FFFFFF;
@@ -800,7 +829,7 @@ body.modal-open {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    flex-shrink: 0; /* Không cho box bị co lại */
+    flex-shrink: 0;
 }
 .right-col .box:hover {
     transform: translateY(-3px);
@@ -808,9 +837,9 @@ body.modal-open {
 .right-col h3 {
     font-size: 20px;
     font-weight: 700;
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     margin-bottom: 15px;
-    border-bottom: 2px solid #F59E0B;
+    border-bottom: 2px solid #EF4444; /* Đỏ trung bình */
     padding-bottom: 8px;
 }
 
@@ -859,14 +888,14 @@ body.modal-open {
 }
 .left-col .news-content h3 a {
     text-decoration: none;
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
     margin: 0 0 12px 0;
 }
 .left-col .news-content h3 a:hover {
-    color: #3B82F6;
+    color: #F87171; /* Đỏ nhạt khi hover */
 }
 .left-col .news-content p {
     font-family: 'Open Sans', sans-serif;
@@ -887,7 +916,7 @@ body.modal-open {
     padding: 25px 20px;
 }
 .newsletter-box h3 {
-    color: #1E3A8A;
+    color: #B91C1C; /* Đỏ đậm */
     margin-bottom: 15px;
     font-size: 18px;
 }
@@ -903,7 +932,7 @@ body.modal-open {
     font-size: 14px;
 }
 .newsletter-form button {
-    background: linear-gradient(90deg, #1E3A8A, #3B82F6);
+    background: linear-gradient(90deg, #7F1D1D, #F87171); /* Đỏ đậm → Đỏ nhạt */
     color: #FFFFFF;
     border: none;
     padding: 12px;
@@ -913,7 +942,7 @@ body.modal-open {
     transition: background 0.3s;
 }
 .newsletter-form button:hover {
-    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    background: linear-gradient(90deg, #B91C1C, #FCA5A5); /* Hover sáng hơn */
 }
 
 /* Popular News */
@@ -975,7 +1004,7 @@ body.modal-open {
 .action-bar .add-news-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #1E3A8A;
+    background: linear-gradient(90deg, #B91C1C, #F87171); /* Đỏ đậm đến nhạt */
     color: #FFFFFF;
     border-radius: 4px;
     text-decoration: none;
@@ -984,7 +1013,7 @@ body.modal-open {
     transition: background 0.3s, transform 0.3s;
 }
 .action-bar .add-news-btn:hover {
-    background: #3B82F6;
+    background: #EF4444; /* Đỏ trung bình khi hover */
     transform: translateY(-2px);
 }
 
@@ -1005,89 +1034,86 @@ body.modal-open {
 .left-col .news-item:nth-child(1) { animation-delay: 0.1s; }
 .left-col .news-item:nth-child(2) { animation-delay: 0.2s; }
 
-    /* CSS hiện tại (giữ nguyên) */
-    /* ... (giữ các style cũ nếu có) ... */
+/* Modal */
+.new-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
 
-    /* CSS cho modal mới */
-    .new-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 2000;
-        align-items: center;
-        justify-content: center;
-        overflow-y: auto; /* Cho phép cuộn toàn modal */
-    }
+.new-modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
 
+.new-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.new-form-group {
+    margin-bottom: 15px;
+}
+
+.new-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.new-form-group input,
+.new-form-group select,
+.new-form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.new-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.new-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #DC2626; /* Đỏ đậm */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.new-submit-btn:hover {
+    background: #EF4444; /* Đỏ sáng hơn khi hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .new-modal-content {
-        background: #fff;
-        width: 90%;
-        max-width: 600px;
-        padding: 20px;
-        border-radius: 8px;
-        position: relative;
-        max-height: 80vh; /* Giới hạn chiều cao */
-        overflow-y: auto; /* Cuộn nội dung */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        margin: 20px auto; /* Căn giữa */
+        width: 95%;
+        max-height: 85vh;
     }
-
-    .new-close-btn {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 24px;
-        color: #333;
-        cursor: pointer;
-    }
-
-    .new-form-group {
-        margin-bottom: 15px;
-    }
-
-    .new-form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .new-form-group input,
-    .new-form-group select,
-    .new-form-group textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    .new-form-group textarea {
-        min-height: 100px; /* Đảm bảo đủ dài để test cuộn */
-        resize: vertical;
-    }
-
-    .new-submit-btn {
-        width: 100%;
-        padding: 10px;
-        background: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .new-submit-btn:hover {
-        background: #45a049;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .new-modal-content {
-            width: 95%;
-            max-height: 85vh;
-        }
-    }
+}
