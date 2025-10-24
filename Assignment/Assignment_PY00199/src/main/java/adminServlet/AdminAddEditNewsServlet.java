@@ -1,5 +1,12 @@
 package adminServlet;
 
+import java.io.File;
+import java.io.IOException;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.UUID;
+
 import DAO.CategoryDAO;
 import DAO.CategoryDAOImpl;
 import DAO.NewsDAO;
@@ -7,7 +14,6 @@ import DAO.NewsDAOImpl;
 import Entity.Category;
 import Entity.News;
 import Entity.User;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,12 +22,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
-
-import java.io.File;
-import java.io.IOException;
-import java.sql.Date;
-import java.util.List;
-import java.util.UUID;
 
 @WebServlet("/admin/add_edit_news")
 @MultipartConfig
@@ -48,7 +48,7 @@ public class AdminAddEditNewsServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
+    	
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
 
@@ -59,7 +59,7 @@ public class AdminAddEditNewsServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/login.jsp");
             return;
         }
-
+        
         String id = req.getParameter("id");
         String title = req.getParameter("title");
         String content = req.getParameter("content");
@@ -68,10 +68,13 @@ public class AdminAddEditNewsServlet extends HttpServlet {
         String homeParam = req.getParameter("home");
         String status = req.getParameter("status");
         String oldImage = req.getParameter("oldImage");
+        String postedDateStr = req.getParameter("postedDate");
+
 
         boolean home = "1".equals(homeParam) || "true".equalsIgnoreCase(homeParam);
         Integer position = (positionStr != null && !positionStr.isEmpty()) ? Integer.valueOf(positionStr) : null;
-
+        
+        
         // Upload ảnh
         Part imagePart = req.getPart("image");
         String fileName = null;
@@ -91,14 +94,24 @@ public class AdminAddEditNewsServlet extends HttpServlet {
         news.setTitle(title);
         news.setContent(content);
         news.setImage(fileName != null ? fileName : "default.jpg");
-        news.setPostedDate(new Date(System.currentTimeMillis()));
+        
         news.setAuthor(user.getId());
         news.setViewCount(0);
         news.setCategoryId(categoryId);
         news.setHome(home);
         news.setPosition(position);
         news.setStatus(status != null ? status : "Chưa duyệt");
+        
+        Date postedDate = null;
+        if (postedDateStr != null && !postedDateStr.isEmpty()) {
+            postedDate = Date.valueOf(postedDateStr);
+        } else {
+            postedDate = new Date(System.currentTimeMillis());
+        }
 
+        news.setPostedDate(postedDate);
+
+        
         NewsDAOImpl newsDAO = new NewsDAOImpl();
         boolean result = (id == null || id.isEmpty()) ? newsDAO.insert(news) : newsDAO.update(news);
 
@@ -116,5 +129,7 @@ public class AdminAddEditNewsServlet extends HttpServlet {
                 resp.sendRedirect(req.getContextPath() + "/reporter/edit_news.jsp?error=true");
             }
         }
+    	
+
     }
 }

@@ -55,7 +55,7 @@
     <!-- Header -->
     <header class="site-header">
         <div class="container">
-            <div class="logo">ABC <span>News</span></div>
+            <div class="logo">News <span>newspaper</span></div>
             <%@ include file="../includes/news_index_nav.jsp" %>
     </header>
 

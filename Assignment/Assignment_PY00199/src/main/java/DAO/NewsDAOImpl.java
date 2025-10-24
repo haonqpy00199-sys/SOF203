@@ -127,9 +127,11 @@ public class NewsDAOImpl implements NewsDAO {
             }
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+        	e.printStackTrace();
+            System.out.println("SQL Error when inserting news: " + e.getMessage());
+            return false;
         }
-        return false;
+        
     }
 
     @Override

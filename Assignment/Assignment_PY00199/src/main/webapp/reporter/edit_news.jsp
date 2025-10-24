@@ -33,7 +33,7 @@
 <!-- HEADER -->
 <header class="site-header">
     <div class="container">
-        <div class="logo">ABC <span>News</span></div>
+        <div class="logo">News <span>newspaper</span></div>
         <nav class="menu">
             <a href="${pageContext.request.contextPath}/index"
                class="${fn:contains(pageContext.request.requestURI, '/index') ? 'active' : ''}">Trang chủ</a>
@@ -93,20 +93,25 @@
                 <input type="text" id="title" name="title"
                        value="${news.title}" placeholder="Nhập tiêu đề tin" required>
             </div>
-
-            <!-- Thể loại -->
-            <div class="form-group">
-                <label for="category">Thể loại</label>
-                <select name="categoryId" id="category" required>
-                    <option value="">-- Chọn thể loại --</option>
-                    <c:forEach var="c" items="${categories}">
-                        <option value="${c.id}"
-                            <c:if test="${news != null && news.categoryId == c.id}">selected</c:if>>
-                            ${c.name}
-                        </option>
-                    </c:forEach>
-                </select>
-            </div>
+<!-- Thể loại -->
+<div class="form-group">
+    <label for="category">Thể loại</label>
+    <select name="categoryId" id="category" required>
+        <option value="">-- Chọn thể loại --</option>
+        <option value="VH"
+            <c:if test="${news != null && news.categoryId == 'VH'}">selected</c:if>>
+            Văn hóa
+        </option>
+        <option value="PL"
+            <c:if test="${news != null && news.categoryId == 'PL'}">selected</c:if>>
+            Pháp luật
+        </option>
+        <option value="TT"
+            <c:if test="${news != null && news.categoryId == 'TT'}">selected</c:if>>
+            Thể thao
+        </option>
+    </select>
+</div>
 
             <!-- Hình ảnh -->
             <div class="form-group">

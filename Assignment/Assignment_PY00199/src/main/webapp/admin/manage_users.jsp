@@ -148,7 +148,7 @@ body.modal-open {
     <!-- Header -->
     <header class="site-header">
         <div class="container">
-            <div class="logo">ABC <span>News</span></div>
+            <div class="logo">News<span>newspaper</span></div>
 
             <nav class="menu">
                 <a href="${pageContext.request.contextPath}/index"

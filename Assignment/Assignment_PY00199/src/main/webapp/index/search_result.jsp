@@ -19,7 +19,7 @@
 <!-- Header -->
 <header class="site-header">
     <div class="container">
-        <div class="logo">ABC <span>News</span></div>
+        <div class="logo">News <span>newspaper</span></div>
         <jsp:include page="/includes/news_index_nav.jsp" />
     </div>
 </header>
